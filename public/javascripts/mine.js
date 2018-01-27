@@ -15,7 +15,12 @@ let ajax = () => {
      	let parsedResponse = JSON.parse(oldResponse);
      	for(let i=0; i<parsedResponse.length;i++){
      		let indexSelect = document.querySelector("#i" + i.toString());
-     		indexSelect.textContent = parsedResponse[i].data.char;
+     		if(parsedResponse[i].data.char == ' '){
+                indexSelect.textContent = "_";
+            }
+            else{
+            indexSelect.textContent = parsedResponse[i].data.char;
+            }
      	}
      	console.log(JSON.parse(oldResponse));
      }
