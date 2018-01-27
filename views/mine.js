@@ -8,16 +8,23 @@ let ajax = () => {
      let newResponse = this.responseText;
      if(oldResponse == undefined){
      	oldResponse = newResponse;
+     	let parsedResponse = JSON.parse(oldResponse);
+     	for(let i=0; i<parsedResponse.length;i++){
+     		let indexSelect = document.querySelector("#i" + i.toString());
+     		indexSelect.textContent = parsedResponse[i].data.char;
+     	}
      	console.log(JSON.parse(oldResponse));
      }
      else if(oldResponse === newResponse){
      	return;
      }
      else{
-     	parsedNewResponse = JSON.parse(newResponse);
-     	parsedOldResponse = JSON.parse(oldResponse);
+     	let parsedNewResponse = JSON.parse(newResponse);
+     	let parsedOldResponse = JSON.parse(oldResponse);
+     	console.log("changed");
+
      	oldResponse = newResponse;
-     	return;
+     	console.log(JSON.parse(oldResponse));
      }
     }
   };
