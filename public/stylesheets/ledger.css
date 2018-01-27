@@ -1,8 +1,11 @@
+font-family: 'Graduate', cursive;
+
 body{
 	border: 3px solid #ADD8E6;
 	height: 960px;
 	width: 960px;
 	text-align: center;
+	font-family: 'Graduate', cursive;
 }
 body > h1{
 	font-size: 72px;

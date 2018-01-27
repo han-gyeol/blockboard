@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Graduate');
+
 body{
 	border: 3px solid #ADD8E6;
 	height: 960px;
 	width: 960px;
 	text-align: center;
+	font-family: 'Graduate', cursive;
 }
 
 #title{
@@ -11,6 +14,21 @@ body{
 
 #letterBlk{
 	height: 40%;
+	
+}
+
+#letters{
+	padding-top: 150px;
+	font-size: 48px;
+}
+.letter{
+	border-bottom: 2px solid black;
+}
+#index > center > span{
+	display: inline-block;
+	font-size: 36px;
+	margin: 10px;
+	width: 2.5%;
 }
 
 #nameBlk >h2{
@@ -66,7 +84,7 @@ body{
 
 #mineBtn > button{
 	border: 3px solid #ADD8E6;
-	width: 80px;
+	width: 150px;
 	height: 80px;
 	cursor: pointer;
 }
