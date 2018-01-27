@@ -1,8 +1,27 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#container{
+	border: 3px solid #ADD8E6;
+	height: 960px;
+
 }
 
-a {
-  color: #00B7FF;
+#letters{
+	height: 50%;
+	padding-top: 400px;
+	margin: 0 auto;
+
+}
+
+.letter{
+	display: inline-block;
+	border-bottom: 5px solid black;
+}
+
+#buttons{
+	position: relative;
+	top: -250px;
+}
+
+#buttons > center >span{
+	border: 3px solid #ADD8E6;
+
 }
