@@ -91,6 +91,7 @@ body{
 #indexAndCharBlk{
 	margin-top: -20px;
 	margin-bottom: 20px;
+	margin-left: 30px;
 }
 
 #indexAndCharBlk > span{
@@ -104,7 +105,7 @@ body{
 }
 
 #indexBlk{
-	margin-right: 80px;
+	margin-right: 20px;
 	
 }
 
@@ -116,7 +117,7 @@ body{
 }
 
 #charBlk{
-	margin-left: 60px;
+	margin-left: 40px;
 }
 
 #charBlk > input{
