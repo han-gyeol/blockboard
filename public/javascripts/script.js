@@ -1,7 +1,7 @@
-const letters = document.querySelectorAll(".letter");
+const letterBlk = document.querySelectorAll("#letterBlk");
 const mine = document.querySelector("#mine");
 const ledger = document.querySelector("#ledger");
-
+const loader = document.querySelectorAll(".loader");
 let oldResponse;
 
 let ajax = () => {
@@ -10,6 +10,8 @@ let ajax = () => {
     if (this.readyState == 4 && this.status == 200) {
      let newResponse = this.responseText;
      if(oldResponse == undefined){
+        letterBlk[0].style.display = "block";
+        loader[0].style.display = "none";
      	oldResponse = newResponse;
      	let parsedResponse = JSON.parse(oldResponse);
      	for(let i=0; i<parsedResponse.length;i++){
@@ -21,7 +23,6 @@ let ajax = () => {
      		indexSelect.textContent = parsedResponse[i].data.char;
      		}
      	}
-     	console.log(JSON.parse(oldResponse));
      }
      else if(oldResponse === newResponse){
      	return;
@@ -32,7 +33,6 @@ let ajax = () => {
      	console.log("changed");
 
      	oldResponse = newResponse;
-     	console.log(JSON.parse(oldResponse));
      }
     }
   };
@@ -53,9 +53,6 @@ mine.addEventListener("click", redirectMine);
 ledger.addEventListener("click", redirectLedger);
 
 window.onload=function(){
-	setInterval('ajax()',1000);
+	setInterval('ajax()', 2000);
 }
 
-
-
-// letters.forEach(letter => letter.addEventListener("click"))
