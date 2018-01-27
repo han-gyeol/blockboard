@@ -31,6 +31,9 @@ body{
 	margin: 5px;
 	width: 2.5%;
 }
+#nameBlk{ 
+  margin-top: -16px;
+}
 
 #nameBlk >h2{
 	font-size: 48px;
