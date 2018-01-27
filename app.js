@@ -9,29 +9,31 @@ var index = require('./routes/index');
 var api = require('./routes/api');
 
 var app = express();
-var db;
 
+// var db;
 
-// var mysql = require('mysql');
-// var connection = mysql.createConnection({
-//   host : 'us-cdbr-iron-east-05.cleardb.net',
-//   user : 'b37541c41271e5',
-//   password : '3fd8cac25805ceb',
-//   database : 'heroku_5669a3ca68cd31a'
+// var MongoClient = require('mongodb').MongoClient;
+// var mongoUrl = "mongodb://admin:admin@ds117148.mlab.com:17148/blockboard";
+
+// MongoClient.connect(mongoUrl, function(err, database) {
+//   if (err) throw err;
+//   console.log("Database connected!");
+//   db = database.db('blockboard');
+
+  // var newBlock = {
+  //   _id : 1,
+  //   name : "newname",
+  //   hash : "random hash"
+  // }
+  // db.collection("block").insert( newBlock );
+  
+  // var query = { };
+  // db.collection("block").find(query).toArray(function(err, result) {
+  //   if (err) throw err;
+  //   console.log(result);
+  // });
+
 // });
-
-var MongoClient = require('mongodb').MongoClient;
-var mongoUrl = "mongodb://admin:admin@ds117148.mlab.com:17148/blockboard";
-
-MongoClient.connect(mongoUrl, function(err, database) {
-  if (err) throw err;
-  console.log("Database connected!");
-  db = database.db('blockboard');
-  db.collection('block').findOne({}, function(err, result) {
-    if (err) throw err;
-    console.log(result.name);
-  });
-});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
