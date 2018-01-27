@@ -8,31 +8,29 @@ body{
 	height: 960px;
 	width: 960px;
 }
-
-#letters{
-	height: 50%;
-	padding-top: 400px;
-	margin: 0 auto;
-
+#letterBlk{
+	height: 10%;
+	padding-top: 250px;
+	margin-bottom: 40px;
 }
 
 .letter{
 	display: inline-block;
 	border-bottom: 5px solid black;
-	font-size: 72px;
+	font-size: 48px;
 }
 
-#buttons{
-	position: relative;
-	top: -250px;
+#index > center > span{
+	display: inline-block;
+	font-size: 30px;
+	margin: 5px;
+	width: 2.5%;
 }
 
 #buttons > center >span{
 	border: 3px solid #ADD8E6;
 	font-size: 36px;
 	cursor: pointer;
+	margin: 50px;
 }
 
-#mine{
-	margin-right: 50px;
-}

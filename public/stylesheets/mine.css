@@ -19,15 +19,16 @@ body{
 
 #letters{
 	padding-top: 150px;
-	font-size: 48px;
+	
 }
 .letter{
+	font-size: 48px;
 	border-bottom: 2px solid black;
 }
 #index > center > span{
 	display: inline-block;
-	font-size: 36px;
-	margin: 10px;
+	font-size: 30px;
+	margin: 5px;
 	width: 2.5%;
 }
 
