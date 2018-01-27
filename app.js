@@ -10,31 +10,6 @@ var api = require('./routes/api');
 
 var app = express();
 
-// var db;
-
-// var MongoClient = require('mongodb').MongoClient;
-// var mongoUrl = "mongodb://admin:admin@ds117148.mlab.com:17148/blockboard";
-
-// MongoClient.connect(mongoUrl, function(err, database) {
-//   if (err) throw err;
-//   console.log("Database connected!");
-//   db = database.db('blockboard');
-
-  // var newBlock = {
-  //   _id : 1,
-  //   name : "newname",
-  //   hash : "random hash"
-  // }
-  // db.collection("block").insert( newBlock );
-  
-  // var query = { };
-  // db.collection("block").find(query).toArray(function(err, result) {
-  //   if (err) throw err;
-  //   console.log(result);
-  // });
-
-// });
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

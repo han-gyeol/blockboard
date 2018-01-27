@@ -19,9 +19,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/board', function(req, res, next) {
   var query = {
-    data : {
-      display : 1
-    }
+    "data.display" : 1
   }
   db.find(query).toArray((err, result) => {
     var blocks = JSON.stringify(result);
@@ -42,14 +40,10 @@ router.post('/add_block', function(req, res, next) {
   db.find().sort({_id:-1}).limit(1).toArray((err, result) => {
     // replace old block
     var query = {
-      data : {
-        index : body.index
-      }
+      "data.index" : body.index
     }
     var update = {
-      data : {
-        display : 0
-      }
+      "data.display" : 0
     }
     db.update(query, update, { upsert : true });
 
@@ -65,8 +59,8 @@ router.post('/add_block', function(req, res, next) {
         name : body.name,
         char : body.char,
         index : body.index,
-        display : 1
-      }
+      },
+      display : 1
     }
     db.insert(newBlock);
     
