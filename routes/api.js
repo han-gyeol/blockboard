@@ -38,7 +38,6 @@ router.get('/board', function(req, res, next) {
 router.post('/add_block', function(req, res, next) {
   var body = req.body;
   db.find().sort({_id:-1}).limit(1).toArray((err, result) => {
-    console.log(result)
     // replace old block
     var query = {
       "data.index" : body.index
