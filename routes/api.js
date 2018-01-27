@@ -38,17 +38,22 @@ router.get('/board', function(req, res, next) {
 router.post('/add_block', function(req, res, next) {
   var body = req.body;
   db.find().sort({_id:-1}).limit(1).toArray((err, result) => {
+    console.log(result)
     // replace old block
     var query = {
       "data.index" : body.index
     }
     var update = {
-      "data.display" : 0
+      $set : {
+        "data.display" : 0
+      }
     }
-    db.update(query, update, { upsert : true });
+    db.update(query, update, { multi: true }, (err, result) => {
+      if(err) console.log(err);
+    });
 
-    //add new block
-    var id = result[0]+1;
+    // add new block
+    var id = result[0]._id+1;
     var newBlock = {
       _id : id,
       previousHash : body.previousHash,
@@ -59,8 +64,8 @@ router.post('/add_block', function(req, res, next) {
         name : body.name,
         char : body.char,
         index : body.index,
-      },
-      display : 1
+        display : 1
+      }
     }
     db.insert(newBlock);
     
