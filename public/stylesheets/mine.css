@@ -1,0 +1,78 @@
+body{
+	border: 3px solid #ADD8E6;
+	height: 960px;
+	width: 960px;
+	text-align: center;
+}
+
+#title{
+	font-size: 72px;
+}
+
+#letterBlk{
+	height: 40%;
+}
+
+#nameBlk >h2{
+	font-size: 48px;
+}
+
+#nameBlk > input{
+	margin-top: 20px;
+	width: 200px;
+	height: 40px;
+	font-size: 40px;
+	text-align: center;
+	border: 3px solid #ADD8E6;
+}
+
+#indexAndCharBlk{
+	margin: 40px;
+}
+
+#indexAndCharBlk > span{
+	display: inline-block;
+	padding-top: 50px;
+}
+
+#indexAndCharBlk > span > h3{
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+#indexBlk{
+	margin-right: 80px;
+	
+}
+
+#indexBlk > select{
+	width: 60px;
+	height: 40px;
+	font-size: 20px;
+	border: 3px solid #ADD8E6;
+}
+
+#charBlk{
+	margin-left: 60px;
+}
+
+#charBlk > input{
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+	border: 3px solid #ADD8E6;
+}
+
+#mineBtn > button{
+	border: 3px solid #ADD8E6;
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+
+
+
+
+
+

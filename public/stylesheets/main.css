@@ -1,0 +1,33 @@
+#container{
+	border: 3px solid #ADD8E6;
+	height: 960px;
+	width: 960px;
+}
+
+#letters{
+	height: 50%;
+	padding-top: 400px;
+	margin: 0 auto;
+
+}
+
+.letter{
+	display: inline-block;
+	border-bottom: 5px solid black;
+	font-size: 72px;
+}
+
+#buttons{
+	position: relative;
+	top: -250px;
+}
+
+#buttons > center >span{
+	border: 3px solid #ADD8E6;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+#mine{
+	margin-right: 50px;
+}
