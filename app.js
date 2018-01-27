@@ -1,4 +1,5 @@
 var express = require('express');
+var mysql = require('mysql');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -9,6 +10,15 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+var connection = mysql.createConnection({
+  host : 'us-cdbr-iron-east-05.cleardb.net',
+  user : 'b37541c41271e5',
+  password : 'a468cb7b',
+  database : 'heroku_5669a3ca68cd31a'
+});
+
+connection.connect();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
