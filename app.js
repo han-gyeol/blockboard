@@ -1,5 +1,4 @@
 var express = require('express');
-var mysql = require('mysql');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -10,15 +9,31 @@ var index = require('./routes/index');
 var api = require('./routes/api');
 
 var app = express();
+var db;
 
-var connection = mysql.createConnection({
-  host : 'us-cdbr-iron-east-05.cleardb.net',
-  user : 'b37541c41271e5',
-  password : '3fd8cac25805ceb',
-  database : 'heroku_5669a3ca68cd31a'
+
+// var mysql = require('mysql');
+// var connection = mysql.createConnection({
+//   host : 'us-cdbr-iron-east-05.cleardb.net',
+//   user : 'b37541c41271e5',
+//   password : '3fd8cac25805ceb',
+//   database : 'heroku_5669a3ca68cd31a'
+// });
+
+var MongoClient = require('mongodb').MongoClient;
+var mongoUrl = "mongodb://heroku_xxdpkl3c:66ekjvlvfu86sj38k39l0j9obe@ds021701.mlab.com:21701/heroku_xxdpkl3c";
+// var mongoUrl = "mongodb://Han:ok950209@ds117148.mlab.com:17148/blockboard";
+
+MongoClient.connect(mongoUrl, function(err, database) {
+  if (err) throw err;
+  console.log("Database connected!");
+  db = database.db('blockboard');
+  // console.log(db.collection('block').find( { index : 5 } ));
+  db.collection('block').findOne({}, function(err, result) {
+    if (err) throw err;
+    console.log(result.name);
+  });
 });
-
-connection.connect();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
