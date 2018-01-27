@@ -27,8 +27,8 @@ body{
 }
 #index > center > span{
 	display: inline-block;
-	font-size: 30px;
-	margin: 5px;
+	font-size: 28px;
+	margin: 18px 3px;
 	width: 2.5%;
 }
 #nameBlk{ 
