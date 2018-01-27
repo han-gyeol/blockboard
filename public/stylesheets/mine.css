@@ -46,7 +46,8 @@ body{
 }
 
 #indexAndCharBlk{
-	margin: 40px;
+	margin-top: -20px;
+	margin-bottom: 20px;
 }
 
 #indexAndCharBlk > span{
@@ -61,7 +62,6 @@ body{
 
 #indexBlk{
 	margin-right: 80px;
-
 	
 }
 
