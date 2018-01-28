@@ -72,7 +72,7 @@ let mineBlock = (name, char, index) => {
 		"_id": parseInt(latestBlock._id) + 1,
 		"previousHash": latestBlock.hash,
 		"hash": "temp",
-		"timestamp": Date.now(),
+		"timestamp": getCurrentTime(),
 		"nonce": 0,
 		"data": {
 			"name": name,
@@ -87,17 +87,18 @@ let mineBlock = (name, char, index) => {
 		newBlock.nonce++;
 		newBlock.hash = calculateHash(newBlock);
 	}
-	console.log("BLOCK MINED: " + newBlock.hash);
-
+	
 	var jsonData = {
 		"previousHash" : latestBlock.hash,
-		"hash" : "temp",
-		"timestamp" : "temp",
-		"nonce" : 0,
-		"name" : "temp",
-		"char" : "S",
-		"index" : 0
+		"hash" : newBlock.hash,
+		"timestamp" : getCurrentTime(),
+		"nonce" : newBlock.data.nonce,
+		"name" : newBlock.data.name,
+		"char" : newBlock.data.char,
+		"index" : newBlock.data.index
 	}
+	console.log("BLOCK MINED: " + jsonData);
+	
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("POST", "https://hr-blockboard.herokuapp.com/api/add_block", true);
 	xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -109,8 +110,15 @@ let calculateHash = (block) => {
 }
 
 let getCurrentTime = () => {
-	// let now = Date.UTC();
-	// return now.get
+	let date = new Date();
+	let day = date.getUTCDate();
+	let month = date.getUTCMonth();
+	let year = date.getUTCFullYear();
+	let hour = date.getUTCHours();
+	let min = date.getUTCMinutes();
+	let sec = date.getUTCSeconds();
+
+	return day+'/'+month+'/'+year+' '+hour+':'+min+':'+sec;
 }
 
 window.onload = function () {
