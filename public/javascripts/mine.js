@@ -9,7 +9,7 @@ var nameInput = document.getElementById('name');
 var charInput = document.getElementById('char');
 var indexInput = document.getElementById('indexSelect');
 buttonElement.addEventListener('click', function(){
-    mineBlock(nameInput.value, charInput.value, indexInput.value);
+    mineBlock(nameInput.value, charInput.value, (parseInt(indexInput.value)-1).toString());
 });
 
 let ajax = () => {
@@ -17,10 +17,6 @@ let ajax = () => {
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			let newResponse = this.responseText;
-
-			// console.log(nameInput);
-			// console.log(charInput);
-			// console.log(indexInput);
 
 			let blockList = JSON.parse(newResponse);
 			let max = -1;
@@ -98,7 +94,7 @@ let mineBlock = (name, char, index) => {
 		"index" : newBlock.data.index
 	}
 	console.log("BLOCK MINED: " + jsonData);
-	
+
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("POST", "https://hr-blockboard.herokuapp.com/api/add_block", true);
 	xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
