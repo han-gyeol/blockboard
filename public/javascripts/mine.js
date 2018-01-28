@@ -9,7 +9,7 @@ var nameInput = document.getElementById('name');
 var charInput = document.getElementById('char');
 var indexInput = document.getElementById('indexSelect');
 buttonElement.addEventListener('click', function () {
-	buttonElement.innerHTML = 'Mining...';
+	buttonElement.value = 'Mining...';
 	buttonElement.disabled = true;
 	mineBlock(nameInput.value, charInput.value, (parseInt(indexInput.value) - 1).toString());
 });
@@ -102,7 +102,7 @@ let mineBlock = (name, char, index) => {
 	xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xmlhttp.send(JSON.stringify(jsonData));
 
-	buttonElement.innerHTML = 'Mine';
+	buttonElement.value = 'Mine';
 	buttonElement.disabled = false;
 }
 
