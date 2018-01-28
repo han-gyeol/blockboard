@@ -64,8 +64,8 @@ body{
 #index > center > span{
 	display: inline-block;
 	font-size: 200px;
-	margin: 5%;
-	padding: 30px;
+	margin: 10%;
+	padding: 10px;
 }
 
 #buttons > center >span{
