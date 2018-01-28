@@ -28,12 +28,17 @@ let ajax = () => {
      	return;
      }
      else{
-     	let parsedNewResponse = JSON.parse(newResponse);
-     	let parsedOldResponse = JSON.parse(oldResponse);
-     	console.log("changed");
-
-     	oldResponse = newResponse;
-     	console.log(JSON.parse(oldResponse));
+        oldResponse = newResponse;
+        let parsedResponse = JSON.parse(oldResponse);
+        for(let i=0; i<parsedResponse.length;i++){
+            let indexSelect = document.querySelector("#i" + parsedResponse[i].data.index);
+            if(parsedResponse[i].data.char == ' '){
+                indexSelect.textContent = "_";
+            }
+            else{
+            indexSelect.textContent = parsedResponse[i].data.char;
+            }
+        }
      }
     }
   };
