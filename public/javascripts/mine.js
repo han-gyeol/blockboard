@@ -64,7 +64,7 @@ let ajax = () => {
 	xhttp.send();
 }
 
-let difficulty = 4;
+let difficulty = 3;
 let mineBlock = (name, char, index) => {
 	if(!name) name = " ";
 	if(!char) cahr = " ";
