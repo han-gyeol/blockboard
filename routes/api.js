@@ -32,7 +32,20 @@ router.get('/board', function(req, res, next) {
       res.send(blocks);
     }
   });
+});
 
+router.get('/table', function(req, res, next) {
+  db.find().toArray((err, result) => {
+    var blocks = JSON.stringify(result);
+
+    if(err) {
+      console.log('Error: ' + err);
+      res.send('Error: ');
+    }
+    else {
+      res.send(blocks);
+    }
+  });
 });
 
 router.post('/add_block', function(req, res, next) {

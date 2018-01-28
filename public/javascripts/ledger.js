@@ -52,6 +52,7 @@ let ajax = () => {
      	if(table.rows.length > 5){
      		table.deleteRow(5);
      	}
+     	let parsedResponse = JSON.parse(oldResponse);
         // let parsedOldResponse = JSON.parse(oldResponse);
         // let parsedNewResponse = JSON.parse(newResponse);
         // let indexChange = checkArrayDifferent(parsedOldResponse, parsedNewResponse);
