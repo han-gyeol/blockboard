@@ -63,16 +63,16 @@ body{
 
 #index > center > span{
 	display: inline-block;
-	font-size: 130px;
-	margin: 0.4%;
+	font-size: 200px;
+	margin: 5%;
+	padding: 30px;
 }
 
 #buttons > center >span{
 	border: 3px solid #ADD8E6;
-	font-size: 96px;
+	font-size: 36px;
 	cursor: pointer;
 	margin: 50px;
-	padding: 30px;
 }
 
  .loader {
