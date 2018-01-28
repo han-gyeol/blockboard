@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/mine', function(req, res, next) {
-  res.render('mine', { latest_block: latest_block});
+  res.render('mine');
 });
 
 router.get('/ledger', function(req, res, next) {

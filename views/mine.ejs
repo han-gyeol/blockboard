@@ -46,7 +46,7 @@
 	<div id="indexAndCharBlk">
 		<span id="indexBlk">
 			<h3>Index</h3>
-			<select name="index">
+			<select id="indexSelect" name="index">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -61,13 +61,13 @@
 		</span>
 		<span id="charBlk">
 			<h3>Character</h3>
-			<input type="text" name="char" placeholder="CHAR">
+			<input type="text" name="char" id="char" placeholder="CHAR">
 		</span>
 	</div>
 	<div id='mineBtn'>
-		<button>MINE</button>
+		<button id='mineStartBtn'>MINE</button>
 	</div>
-	<script type="text/javascript" src"/javascripts/sha256.js"></script>
+	<script type="text/javascript" src="../public/javascripts/sha256.js"></script>
 	<script type="text/javascript" src="../public/javascripts/mine.js"></script>
 </body>
 </html>
