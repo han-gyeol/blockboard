@@ -22,7 +22,6 @@ let ajax = () => {
             indexSelect.textContent = parsedResponse[i].data.char;
             }
      	}
-     	console.log(JSON.parse(oldResponse));
      }
      else if(oldResponse === newResponse){
      	return;
