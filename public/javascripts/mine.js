@@ -11,7 +11,8 @@ var indexInput = document.getElementById('indexSelect');
 buttonElement.addEventListener('click', function () {
 	buttonElement.value = 'Mining...';
 	buttonElement.disabled = true;
-	mineBlock(nameInput.value, charInput.value, (parseInt(indexInput.value) - 1).toString());
+	buttonElement.style.cursor = "default";
+	// mineBlock(nameInput.value, charInput.value, (parseInt(indexInput.value) - 1).toString());
 });
 
 let ajax = () => {
@@ -106,6 +107,7 @@ let mineBlock = (name, char, index) => {
 
 	buttonElement.value = 'Mine';
 	buttonElement.disabled = false;
+	buttonElement.style.cursor = "pointer";
 }
 
 let calculateHash = (block) => {
