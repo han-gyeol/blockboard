@@ -65,6 +65,8 @@ let ajax = () => {
 
 let difficulty = 4;
 let mineBlock = (name, char, index) => {
+	if(!name) name = " ";
+	if(!char) cahr = " ";
 	console.log("Start Mining Block...");
 	let newBlock = {
 		"_id": parseInt(latestBlock._id) + 1,
