@@ -41,7 +41,7 @@ let ajax = () => {
      			table.deleteRow(5);
      		}
      		let temp = parsedResponse[id];
-     		createRow(id, temp.hash, temp.data.name, temp.data.char, temp.data.index, temp.timestamp);
+     		createRow(temp._id, temp.hash, temp.data.name, temp.data.char, temp.data.index, temp.timestamp);
      	}
      }
      else if(oldResponse === newResponse){
