@@ -64,12 +64,13 @@ body{
 .letter{
 	font-size: 48px;
 	border-bottom: 2px solid black;
+	margin: 0.8%;
 }
 #index > center > span{
 	display: inline-block;
-	font-size: 28px;
-	margin: 18px 3px;
-	width: 2.5%;
+	font-size: 36px;
+	margin: 1%;
+
 }
 #nameBlk{ 
   margin-top: -16px;
