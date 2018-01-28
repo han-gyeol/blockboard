@@ -48,11 +48,11 @@ let ajax = () => {
 
 
 let redirectMine = () => {
-	location.href = "mine.html";
+	location.href = "mine";
 }
 
 let redirectLedger = () => {
-	location.href = "ledger.html";
+	location.href = "ledger";
 }
 
 mine.addEventListener("click", redirectMine);
