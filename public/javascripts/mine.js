@@ -12,7 +12,7 @@ buttonElement.addEventListener('click', function () {
 	buttonElement.value = 'Mining...';
 	buttonElement.disabled = true;
 	buttonElement.style.cursor = "default";
-	// mineBlock(nameInput.value, charInput.value, (parseInt(indexInput.value) - 1).toString());
+	mineBlock(nameInput.value, charInput.value, (parseInt(indexInput.value) - 1).toString());
 });
 
 let ajax = () => {
@@ -64,7 +64,7 @@ let ajax = () => {
 	xhttp.send();
 }
 
-let difficulty = 3;
+let difficulty = 4;
 let mineBlock = (name, char, index) => {
 	if(!name) name = " ";
 	if(!char) cahr = " ";
