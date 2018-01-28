@@ -113,7 +113,7 @@ let calculateHash = (block) => {
 let getCurrentTime = () => {
 	let date = new Date();
 	let day = date.getUTCDate();
-	let month = date.getUTCMonth();
+	let month = date.getUTCMonth()+1;
 	let year = date.getUTCFullYear();
 	let hour = date.getUTCHours();
 	let min = date.getUTCMinutes();
