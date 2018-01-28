@@ -14,7 +14,7 @@ let ajax = () => {
      	oldResponse = newResponse;
      	let parsedResponse = JSON.parse(oldResponse);
      	for(let i=0; i<parsedResponse.length;i++){
-     		let indexSelect = document.querySelector("#i" + i.toString());
+     		let indexSelect = document.querySelector("#i" + parsedResponse[i].data.index);
      		if(parsedResponse[i].data.char == ' '){
                 indexSelect.textContent = "_";
             }
