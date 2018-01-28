@@ -61,7 +61,7 @@ let ajax = () => {
 	xhttp.send();
 }
 
-let difficulty = 1;
+let difficulty = 4;
 let mineBlock = (name, char, index) => {
 	console.log("Start Mining Block...");
 	let newBlock = {
