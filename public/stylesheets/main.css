@@ -58,12 +58,12 @@ body{
 .letter{
 	display: inline-block;
 	border-bottom: 5px solid black;
-	font-size: 48px;
+	font-size: 192px;
 }
 
 #index > center > span{
 	display: inline-block;
-	font-size: 30px;
+	font-size: 130px;
 	margin: 0.4%;
 }
 
