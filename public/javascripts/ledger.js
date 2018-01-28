@@ -58,7 +58,7 @@ let ajax = () => {
         // let indexChange = checkArrayDifferent(parsedOldResponse, parsedNewResponse);
         // let temp = parsedResponse[indexChange];
         let temp = parsedResponse[id];
-     	createRow(id, temp.hash, temp.data.name, temp.data.char, temp.data.index, temp.timestamp);
+     	createRow(tmep._id, temp.hash, temp.data.name, temp.data.char, temp.data.index, temp.timestamp);
 
      }
     }
