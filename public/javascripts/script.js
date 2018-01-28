@@ -14,7 +14,6 @@ let ajax = () => {
         loader[0].style.display = "none";
      	oldResponse = newResponse;
      	let parsedResponse = JSON.parse(oldResponse);
-        console.log(parsedResponse);
      	for(let i=0; i<parsedResponse.length;i++){
      		let indexSelect = document.querySelector("#i" + parsedResponse[i].data.index);
      		if(parsedResponse[i].data.char == ' '){
