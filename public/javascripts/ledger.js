@@ -35,7 +35,7 @@ let ajax = () => {
      if(oldResponse == undefined){
      	oldResponse = newResponse;
      	let parsedResponse = JSON.parse(oldResponse);
-     	for(; id<parsedResponse.length;id++){
+     	for(; id<=parsedResponse.length;id++){
      		console.log(parsedResponse);
      		if(table.rows.length > 5){
      			table.deleteRow(5);
